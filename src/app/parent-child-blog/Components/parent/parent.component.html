@@ -1,11 +1,6 @@
 <div class="wrapper">
   <h2>Parent Component</h2>
-  <div class="title">
-    Selected Item :
-    <span *ngIf="dataFromChild" class="selected-item">
-      {{ dataFromChild?.name }}
-    </span>
-  </div>
+
   <ng-container *ngFor="let item of sampleData">
     <button
       mat-flat-button
@@ -16,11 +11,18 @@
       {{ item.name }}
     </button>
   </ng-container>
-</div>
 
-<div class="wrapper">
-  <app-child
-    [dataFromParent]="passDataFromParent"
-    (dataToParent)="getDataFromChild($event)"
-  ></app-child>
+  <div class="title">
+    Selected Item :
+    <span *ngIf="dataFromChild" class="selected-item">
+      {{ dataFromChild?.name }}
+    </span>
+  </div>
+
+  <div class="wrapper">
+    <app-child
+      [dataFromParent]="passDataFromParent"
+      (dataToParent)="getDataFromChild($event)"
+    ></app-child>
+  </div>
 </div>

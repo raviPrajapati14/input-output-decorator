@@ -14,7 +14,7 @@ export class ChildComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  passMessageToFather(item: ChildData) {
+  passDataToParent(item: ChildData) {
     this.dataToParent.emit(item);
   }
 }
