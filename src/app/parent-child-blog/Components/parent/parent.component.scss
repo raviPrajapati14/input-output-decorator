@@ -1,0 +1,18 @@
+.wrapper {
+  border: 1px solid skyblue;
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 500px;
+  margin-bottom: 20px;
+}
+
+.title {
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.selected-item {
+  padding: 6px 12px;
+  border-radius: 12px;
+  background-color: pink;
+}

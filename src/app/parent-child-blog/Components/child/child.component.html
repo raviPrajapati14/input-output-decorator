@@ -1,0 +1,16 @@
+<h2>Child Component</h2>
+
+<div class="child-wrapper">
+  <ng-container *ngFor="let item of dataFromParent">
+    <mat-card align="center">
+      <mat-card-content> {{ item.name }} </mat-card-content>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="passMessageToFather(item)"
+      >
+        Select
+      </button>
+    </mat-card>
+  </ng-container>
+</div>
