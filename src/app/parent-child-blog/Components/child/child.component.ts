@@ -8,13 +8,13 @@ import { ChildData } from '../../SAMPLE_DATA';
 })
 export class ChildComponent implements OnInit {
   @Input() dataFromParent!: ChildData[];
-  @Output() dataToParent = new EventEmitter();
+  @Output() onClick = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   passDataToParent(item: ChildData) {
-    this.dataToParent.emit(item);
+    this.onClick.emit(item);
   }
 }

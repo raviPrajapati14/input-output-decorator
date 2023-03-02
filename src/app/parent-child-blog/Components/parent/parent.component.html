@@ -22,7 +22,7 @@
   <div class="wrapper">
     <app-child
       [dataFromParent]="passDataFromParent"
-      (dataToParent)="getDataFromChild($event)"
+      (onClick)="getDataFromChild($event)"
     ></app-child>
   </div>
 </div>
